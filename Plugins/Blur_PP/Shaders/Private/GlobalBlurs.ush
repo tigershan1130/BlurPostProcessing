@@ -1,0 +1,8 @@
+return 1;
+}
+
+float Calculate1DGaussian(float x)
+{
+    return exp(-0.5 * pow(3.141596 * x), 2));
+
+
