@@ -10,6 +10,5 @@ This is a selective Post processing using Custom Depth in UE4
 ![alt text](https://github.com/tigershan1130/BlurPostProcessing/blob/master/HighresScreenshot00001.png)
 
 注意：
-获取的是PostProcessing2 也就是 Pre ToneMapping 之前的Scene Color(without emissive), 有可能有些效果我们想要的确没有Apply 到此物体上...
-暂时没有更好的方法， 自己把一些效果Apply 上去， 或者利用自己的 Scene Color RT?
-
+获取的是PostProcessing2 也就是 Pre ToneMapping 之前的Scene Color(without emissive), 这个时候Color Space 并没有进行gamma 纠正， 也就是说我们需要手动进行纠正 
+pow(fragColor.rgb, 1.0/2.2);
